@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <title>MEMORY Matching Game</title>
+</head>
+
+<body>
+    <h1 class="title">MEMORY MATCHING GAME</h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+
+    <div class="container">
+        <div class="info-container">
+            <div class="info">
+                Time: <span id="time">100</span>s
+            </div>
+            <div class="info">
+                Moves: <span id="moves">0</span>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Apple.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Apple.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Strawberry.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Strawberry.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Orange.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Orange.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Corn.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Corn.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Cherry.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Cherry.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Potato.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Potato.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Pumpkin.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Pumpkin.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Grape.png">
+                </div>
+            </div>
+            <div class=" card">
+                <div class="face back">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="flip-image" src="assets/images/Flip.png">
+                </div>
+                <div class=" face front">
+                    <span class="corner corner-top-left"></span>
+                    <span class="corner corner-top-right"></span>
+                    <span class="corner corner-bottom-left"></span>
+                    <span class="corner corner-bottom-right"></span>
+                    <img class="card-image" src="assets/images/Grape.png">
+                </div>
+            </div>
+            <div class="info">Matched: <span id="matched">0</span></div>
+        </div>
+    </div>
+</body>
+
+</html>
