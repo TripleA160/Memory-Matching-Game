@@ -1,7 +1,7 @@
 # Memory-Matching-Game
 Memory Matching game made using HTML &amp; CSS &amp; JavaScript.
 
-This is a project I made for the Internet Technologies course in my CS college. 
+This is a mini-project I made for the Internet Technologies course in my college. 
 
 # Screenshots
 
